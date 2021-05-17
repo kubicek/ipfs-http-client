@@ -68,5 +68,13 @@ module Ipfs
     def swarm_peers
       Commands::SwarmPeers.call self
     end
+
+    def dag_put(data)
+      Commands::DagPut.call self, data
+    end
+
+    def dag_get(cid)
+      Commands::DagGet.call self, cid
+    end
   end
 end
